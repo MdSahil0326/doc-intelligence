@@ -21,7 +21,7 @@ app.add_middleware(
 )
 
 # ── In-memory store replaced by SQLite ──────────────────
-client = Groq(api_key="GROQ_API_KEY")
+client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 # ── RAG Helpers ─────────────────────────────────────────────
 
 def extract_text(file_bytes: bytes, filename: str) -> str:
