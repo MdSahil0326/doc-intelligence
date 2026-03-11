@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 
-const API = "http://127.0.0.1:8000";
+const API = "https://doc-intelligence-backend-91qv.onrender.com";
 
 export default function App() {
   const [docInfo, setDocInfo] = useState(null);
@@ -11,7 +11,7 @@ export default function App() {
   const [dragging, setDragging] = useState(false);
   const fileRef = useRef();
   const chatRef = useRef();
-  
+
   useEffect(() => {
     const fetchStatus = async () => {
       try {
